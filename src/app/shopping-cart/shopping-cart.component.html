@@ -1,0 +1,51 @@
+<router-outlet *ngIf="itemShopping.length===0"></router-outlet>
+<h2 *ngIf="itemShopping.length>0">Shopping Cart</h2>
+
+
+<div class="containerShop" *ngIf="itemShopping.length>0">
+  <div class="shopTableContainer">
+    <table class="table">
+      <thead class="thead">
+        <tr>
+          <th>Product name</th>
+          <th>Quantity</th>
+          <th>Image</th>
+          <th>Price</th>
+          <th>Delete</th>
+
+        </tr>
+      </thead>
+      <tbody *ngFor="let prod of itemShopping">
+        <tr>
+          <td>{{(prod.title)}} </td>
+          <td>{{prod.quantity}} </td>
+          <td><img src={{prod.img}} alt={{prod.title}}></td>
+          <td>{{(prod.price*prod.quantity).toFixed(2)}} €</td>
+          <td>
+            <app-delete [prod]="prod" (deleteProduct)="deleteProduct($event)" [itemShop]="itemShopping" [show]="show"
+              [totalPrecio]="total">
+            </app-delete>
+          </td>
+
+        </tr>
+
+
+      </tbody>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>{{(total).toFixed(2)}} €</td>
+
+        <td></td>
+
+      </tr>
+
+
+    </table>
+    <div class=containterButton>
+
+      <button class="buttonShop" (click)="buyItem()" class="buttonMedium">Buy</button>
+    </div>
+  </div>
+</div>

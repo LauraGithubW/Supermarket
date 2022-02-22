@@ -1,0 +1,235 @@
+body {
+  font-family: "Raleway", sans-serif;
+}
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+}
+.products {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.products .productItem {
+  display: flex;
+  flex-direction: column;
+  width: 14.3em;
+  height: 13em;
+  padding: 1em;
+  margin: 2%;
+  background-color: rgb(181, 231, 101);
+  border: 2px solid black;
+}
+
+.products .productItem img {
+  width: 4em;
+  border-radius: 10%;
+}
+.products .productItem p .buttonJunior {
+  background-color: rgb(245, 226, 226);
+  border: none;
+  margin: 1%;
+  transition: background-color 0.5s ease;
+}
+.products .productItem p .buttonJunior:hover {
+  cursor: pointer;
+  background-color: rgb(213, 252, 186);
+}
+
+.products .productItem .buttonMedium {
+  background-color: rgb(207, 236, 78);
+  border: none;
+  padding: 0.5em;
+  margin-top: -3%;
+  border-radius: 10%;
+  font-weight: 700;
+
+  transition: background-color 0.8s ease;
+}
+.products .productItem .buttonMedium:hover {
+  cursor: pointer;
+  background-color: rgb(213, 252, 186);
+}
+
+.active {
+  background-color: green;
+}
+body {
+  background-image: url("./assets/fruits.jpg");
+}
+
+.pagado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1em;
+  color: rgb(0, 128, 0);
+
+  padding: 2em;
+
+  background-color: rgb(181, 231, 101);
+}
+
+.buttonPagado {
+  background-color: rgb(207, 236, 78);
+  border: none;
+  padding: 0.5em;
+  border-radius: 10%;
+  font-weight: 700;
+  margin: 2px;
+  transition: background-color 0.8s ease;
+  color: rgb(0, 128, 0);
+}
+
+.header {
+  display: flex;
+}
+
+.header img {
+  margin: 0.2em;
+  width: 5em;
+  height: 5em;
+  margin-right: 4em;
+}
+.cartButton {
+  display: flex;
+
+  margin-top: 1em;
+  align-content: center;
+  align-items: center;
+  width: 8em;
+  height: 5em;
+  border: none;
+
+  border-radius: 2em;
+  transition: background-color 0.5s ease;
+}
+.cartButton:hover {
+  background-color: transparent !important;
+}
+.header button {
+  display: flex;
+
+  margin-top: 1em;
+  align-content: center;
+  align-items: center;
+  width: 8em;
+  height: 5em;
+  border: none;
+  background-color: rgb(190, 231, 127);
+  border-radius: 2em;
+}
+.header button:hover {
+  cursor: pointer;
+}
+.header button p {
+  margin-left: 0.5em;
+  color: rgb(10, 10, 10);
+  font-weight: 900;
+}
+.header button .image {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+}
+.cartItems {
+  display: flex;
+
+  width: 13em;
+  padding: 2em;
+  height: 9em;
+  margin-bottom: 2%;
+}
+.cartItems button {
+  padding: 2em;
+  color: rgb(0, 0, 0);
+  border: none;
+  background-color: transparent;
+  border-radius: 2em;
+  transition: background-color 0.5s ease;
+  font-weight: bold;
+  font-size: 1em;
+}
+.cartItems button small {
+  color: #fff;
+}
+.cartItems button:hover {
+  cursor: pointer;
+}
+.cartItems img {
+  width: 5em;
+}
+.containerShop {
+  display: flex;
+
+  width: 100%;
+}
+.containerShop .shopTableContainer {
+  display: flex;
+
+  flex-direction: column;
+  border: 2px solid #aaa;
+  padding: 2em;
+}
+.containerShop .shopTableContainer {
+  border: 2px solid black;
+  background-color: rgb(190, 231, 127);
+
+  margin-right: 2em;
+}
+.containerShop .shopTableContainer table {
+  width: 30em;
+}
+.containerShop .shopTableContainer table th {
+  border: 2px solid black;
+}
+.containerShop .shopTableContainer img {
+  width: 2em;
+  height: 2em;
+}
+td {
+  border: 2px solid black;
+  text-align: center;
+
+  font-weight: 900;
+}
+
+button {
+  background-color: rgb(207, 236, 78);
+  border: none;
+  padding: 0.5em;
+  border-radius: 10%;
+  font-weight: 700;
+  margin: 2px;
+  transition: background-color 0.8s ease;
+  color: rgb(0, 128, 0);
+  transition: background-color 0.5s ease-in;
+}
+button:hover {
+  background-color: rgb(199, 240, 18);
+  cursor: pointer;
+}
+@media (max-width: 631px) {
+  .containerShop {
+    margin-right: 2em;
+  }
+  .containerShop .shopTableContainer {
+    border: 2px solid black;
+    background-color: rgb(190, 231, 127);
+
+    margin-right: 5%;
+  }
+  .containerShop .shopTableContainer table {
+    width: 10em;
+    margin-right: 2em;
+  }
+}
+@media (max-width: 631px) {
+  .containerShop .shopTableContainer table {
+    width: 5em;
+    margin-right: 2em;
+  }
+}

@@ -1,0 +1,37 @@
+<div class="cartItems"><button class="cartButton" (click)="goCart()">
+    <p>¡GO TO CART! <br><small *ngIf="this.cartItem.length>0">Items X {{this.cartItem.length}}</small></p>
+    <img class="image" src="../../assets/shopping-cart-g9aa2114ee_640.png" />
+  </button></div>
+<div class="contenedor">
+  <div class="products" *ngFor="let prod of product; let i=index">
+    <div class="productItem">
+      <h3>{{prod.title}}</h3>
+      <img src={{prod.img}} alt={{prod.title}}>
+      <p>Quantity: <button *ngIf="prod.quantity>=1" class="buttonJunior"
+          (click)="decrementQuantity(prod)">-</button>{{prod.quantity}}<button (click)="incrementQuantity(prod)"
+          class="buttonJunior">+</button> Price: {{(prod.price*prod.quantity).toFixed(2)}}€</p>
+
+      <div class="botones">
+        <button (click)="addItem(prod)" class="buttonMedium">Add</button>
+        <button class="buttonMedium" (click)="goCart()">Go cart</button>
+
+
+      </div>
+      <br><br>
+
+
+
+
+
+
+
+
+    </div>
+
+  </div>
+
+</div>
+<div class="flexi">
+  <app-shopping-cart [itemShopping]="cartItem" [show]="show" [productoIndividual]="productoIndividual">
+  </app-shopping-cart>
+</div>
